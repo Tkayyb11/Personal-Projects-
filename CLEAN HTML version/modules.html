@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Course Hub - Modules</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="index1.html">
+                <img src="https://i.fbcd.co/products/resized/resized-1500-1000/university-logo-converted-01-45c1f69249d8d113e17549c483a945debce48c771b5a4bcdf54fd6f890833276.webp" alt="University Logo" class="logo">
+            </a>
+            <span class="logo-text">Student Course Hub</span>
+        </div>    
+        <nav>
+            <a href="modules.html">Modules</a>
+            <a href="staff.html">Staff</a>
+            <a href="admin_dashboard.html" id="admin-dashboard-link" style="display:none;">Admin Dashboard</a>
+            <a href="admin_login.html" id="login-link">Login</a>
+            <a href="#" id="logout-link" style="display:none;">Logout</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="filter">
+            <h2>Filter Modules</h2>
+            <label>
+                <input type="checkbox" id="undergraduate" value="undergraduate" checked> Undergraduate
+            </label>
+            <label>
+                <input type="checkbox" id="postgraduate" value="postgraduate" checked> Postgraduate
+            </label>
+            <section class="search-container">
+                <input type="text" id="search-bar" placeholder="Search for a module...">
+            </section>
+        </section>
+
+        <section class="programmes">
+            <section class="programmes">
+                <h2>Our Modules</h2>
+                <div class="module-list" id="module-container">
+                    <div class="module" id="undergraduate">
+                        <h3>Introduction to Programming</h3>
+                        <div class="module-leader">Module Leader: Dr. Alice Johnson</div>
+                        <p class="module-description">Covers the fundamentals of programming using Python and Java.</p>
+                        <div class="module-courses">Relevant Courses: All Undergraduate Computer Science Programmes</div>
+                    </div>
+    
+                    <div class="module" data-level="undergraduate">
+                        <h3>Mathematics for Computer Science</h3>
+                        <div class="module-leader">Module Leader: Dr. Brian Lee</div>
+                        <p class="module-description">Teaches discrete mathematics, linear algebra, and probability theory.</p>
+                        <div class="module-courses">Relevant Courses: All Undergraduate Computer Science Programmes</div>
+                    </div>
+    
+                    <div class="module" data-level="undergraduate">
+                        <h3>Computer Systems & Architecture</h3>
+                        <div class="module-leader">Module Leader: Dr. Carol White</div>
+                        <p class="module-description">Explores CPU design, memory management, and assembly language.</p>
+                        <div class="module-courses">Relevant Courses: BSc Computer Science, BSc Software Engineering</div>
+                    </div>
+    
+                    <div class="module" data-level="undergraduate">
+                        <h3>Databases</h3>
+                        <div class="module-leader">Module Leader: Dr. David Green</div>
+                        <p class="module-description">Covers SQL, relational database design, and NoSQL systems.</p>
+                        <div class="module-courses">Relevant Courses: BSc Computer Science, BSc Data Science</div>
+                    </div>
+    
+                    <div class="module" data-level="undergraduate">
+                        <h3>Software Engineering</h3>
+                        <div class="module-leader">Module Leader: Dr. Emma Scott</div>
+                        <p class="module-description">Focuses on agile development, design patterns, and project management.</p>
+                        <div class="module-courses">Relevant Courses: BSc Software Engineering, BSc Computer Science</div>
+                    </div>
+    
+                    <div class="module" data-level="undergraduate">
+                        <h3>Algorithms & Data Structures</h3>
+                        <div class="module-leader">Module Leader: Dr. Frank Moore</div>
+                        <p class="module-description">Examines sorting, searching, graphs, and complexity analysis.</p>
+                        <div class="module-courses">Relevant Courses: BSc Computer Science, BSc Data Science</div>
+                    </div>
+    
+                    <div class="module" data-level="undergraduate">
+                        <h3>Cyber Security Fundamentals</h3>
+                        <div class="module-leader">Module Leader: Dr. Grace Adams</div>
+                        <p class="module-description">Provides an introduction to network security, cryptography, and vulnerabilities.</p>
+                        <div class="module-courses">Relevant Courses: BSc Cyber Security</div>
+                    </div>
+    
+                    <div class="module" data-level="undergraduate">
+                        <h3>Artificial Intelligence</h3>
+                        <div class="module-leader">Module Leader: Dr. Henry Clark</div>
+                        <p class="module-description">Introduces AI concepts such as neural networks, expert systems, and robotics.</p>
+                        <div class="module-courses">Relevant Courses: BSc Artificial Intelligence, BSc Computer Science</div>
+                    </div>
+    
+                    <div class="module" data-level="undergraduate">
+                        <h3>Machine Learning</h3>
+                        <div class="module-leader">Module Leader: Dr. Irene Hall</div>
+                        <p class="module-description">Explores supervised and unsupervised learning, including decision trees and clustering.</p>
+                        <div class="module-courses">Relevant Courses: BSc Data Science, BSc Artificial Intelligence</div>
+                    </div>
+    
+                    <div class="module" data-level="undergraduate">
+                        <h3>Ethical Hacking</h3>
+                        <div class="module-leader">Module Leader: Dr. James Wright</div>
+                        <p class="module-description">Covers penetration testing, security assessments, and cybersecurity laws.</p>
+                        <div class="module-courses">Relevant Courses: BSc Cyber Security</div>
+                    </div>
+    
+                   
+                    <div class="module" data-level="undergraduate">
+                        <h3>Computer Networks</h3>
+                        <div class="module-leader">Module Leader: Dr. Alice Johnson</div>
+                        <p class="module-description">Teaches TCP/IP, network layers, and wireless communication.</p>
+                        <div class="module-courses">Relevant Courses: BSc Computer Science, BSc Cyber Security</div>
+                    </div>
+    
+                    <div class="module" data-level="undergraduate">
+                        <h3>Software Testing & Quality Assurance</h3>
+                        <div class="module-leader">Module Leader: Dr. Brian Lee</div>
+                        <p class="module-description">Focuses on automated testing, debugging, and code reliability.</p>
+                        <div class="module-courses">Relevant Courses: BSc Software Engineering, BSc Computer Science</div>
+                    </div>
+    
+                    <div class="module" data-level="undergraduate">
+                        <h3>Embedded Systems</h3>
+                        <div class="module-leader">Module Leader: Dr. Carol White</div>
+                        <p class="module-description">Examines microcontrollers, real-time OS, and IoT applications.</p>
+                        <div class="module-courses">Relevant Courses: BSc Computer Science, BSc Software Engineering</div>
+                    </div>
+    
+                    <div class="module" data-level="undergraduate">
+                        <h3>Human-Computer Interaction</h3>
+                        <div class="module-leader">Module Leader: Dr. David Green</div>
+                        <p class="module-description">Studies UI/UX design, usability testing, and accessibility.</p>
+                        <div class="module-courses">Relevant Courses: BSc Software Engineering, BSc Computer Science, BSc Data Science</div>
+                    </div>
+    
+                    <div class="module" data-level="undergraduate">
+                        <h3>Blockchain Technologies</h3>
+                        <div class="module-leader">Module Leader: Dr. Emma Scott</div>
+                        <p class="module-description">Covers distributed ledgers, consensus mechanisms, and smart contracts.</p>
+                        <div class="module-courses">Relevant Courses: BSc Software Engineering, MSc Software Engineering</div>
+                    </div>
+    
+                    <div class="module" data-level="undergraduate">
+                        <h3>Cloud Computing</h3>
+                        <div class="module-leader">Module Leader: Dr. Frank Moore</div>
+                        <p class="module-description">Introduces cloud services, virtualization, and distributed systems.</p>
+                        <div class="module-courses">Relevant Courses: BSc Data Science, BSc Computer Science, MSc Data Science</div>
+                    </div>
+    
+                    <div class="module" data-level="undergraduate">
+                        <h3>Digital Forensics</h3>
+                        <div class="module-leader">Module Leader: Dr. Grace Adams</div>
+                        <p class="module-description">Teaches forensic investigation techniques for cybercrime.</p>
+                        <div class="module-courses">Relevant Courses: BSc Cyber Security, MSc Cyber Security</div>
+                    </div>
+    
+                    <div class="module" data-level="undergraduate">
+                        <h3>Final Year Project</h3>
+                        <div class="module-leader">Module Leader: Dr. Henry Clark</div>
+                        <p class="module-description">A major independent project where students develop a software solution.</p>
+                        <div class="module-courses">Relevant Courses: All Undergraduate Computer Science Programmes</div>
+                    </div>
+    
+                    <div class="module" data-level="postgraduate">
+                        <h3>Advanced Machine Learning</h3>
+                        <div class="module-leader">Module Leader: Dr. Sophia Miller</div>
+                        <p class="module-description">Covers deep learning, reinforcement learning, and cutting-edge AI techniques.</p>
+                        <div class="module-courses">Relevant Courses: MSc Machine Learning, MSc Artificial Intelligence</div>
+                    </div>
+    
+                    <div class="module" data-level="postgraduate">
+                        <h3>Cyber Threat Intelligence</h3>
+                        <div class="module-leader">Module Leader: Dr. Benjamin Carter</div>
+                        <p class="module-description">Focuses on cybersecurity risk analysis, malware detection, and threat mitigation.</p>
+                        <div class="module-courses">Relevant Courses: MSc Cyber Security</div>
+                    </div>
+    
+                    <div class="module" data-level="postgraduate">
+                        <h3>Big Data Analytics</h3>
+                        <div class="module-leader">Module Leader: Dr. Chloe Thompson</div>
+                        <p class="module-description">Explores data mining, distributed computing, and AI-driven insights.</p>
+                        <div class="module-courses">Relevant Courses: MSc Data Science</div>
+                    </div>
+    
+                    <div class="module" data-level="postgraduate">
+                        <h3>Cloud & Edge Computing</h3>
+                        <div class="module-leader">Module Leader: Dr. Daniel Robinson</div>
+                        <p class="module-description">Examines scalable cloud platforms, serverless computing, and edge networks.</p>
+                        <div class="module-courses">Relevant Courses: MSc Data Science, MSc Software Engineering</div>
+                    </div>
+    
+                    <div class="module" data-level="postgraduate">
+                        <h3>Blockchain & Cryptography</h3>
+                        <div class="module-leader">Module Leader: Dr. Emily Davis</div>
+                        <p class="module-description">Covers decentralized applications, consensus algorithms, and security measures.</p>
+                        <div class="module-courses">Relevant Courses: MSc Cyber Security, MSc Software Engineering</div>
+                    </div>
+    
+                    <div class="module" data-level="postgraduate">
+                        <h3>AI Ethics & Society</h3>
+                        <div class="module-leader">Module Leader: Dr. Nathan Hughes</div>
+                        <p class="module-description">Analyzes ethical dilemmas in AI, fairness, bias, and regulatory considerations.</p>
+                        <div class="module-courses">Relevant Courses: MSc Machine Learning, MSc Artificial Intelligence</div>
+                    </div>
+    
+                    <div class="module" data-level="postgraduate">
+                        <h3>Quantum Computing</h3>
+                        <div class="module-leader">Module Leader: Dr. Olivia Martin</div>
+                        <p class="module-description">Introduces quantum algorithms, qubits, and cryptographic applications.</p>
+                        <div class="module-courses">Relevant Courses: MSc Software Engineering</div>
+                    </div>
+    
+                    <div class="module" data-level="postgraduate">
+                        <h3>Cybersecurity Law & Policy</h3>
+                        <div class="module-leader">Module Leader: Dr. Samuel Anderson</div>
+                        <p class="module-description">Explores digital privacy, GDPR, and international cyber law.</p>
+                        <div class="module-courses">Relevant Courses: MSc Cyber Security</div>
+                    </div>
+    
+                    <div class="module" data-level="postgraduate">
+                        <h3>Neural Networks & Deep Learning</h3>
+                        <div class="module-leader">Module Leader: Dr. Victoria Hall</div>
+                        <p class="module-description">Delves into convolutional networks, GANs, and AI advancements.</p>
+                        <div class="module-courses">Relevant Courses: MSc Machine Learning, MSc Artificial Intelligence</div>
+                    </div>
+    
+                    <div class="module" data-level="postgraduate">
+                        <h3>Human-AI Interaction</h3>
+                        <div class="module-leader">Module Leader: Dr. William Scott</div>
+                        <p class="module-description">Studies AI usability, NLP systems, and social robotics.</p>
+                        <div class="module-courses">Relevant Courses: MSc Artificial Intelligence</div>
+                    </div>
+    
+                    <div class="module" data-level="postgraduate">
+                        <h3>Autonomous Systems</h3>
+                        <div class="module-leader">Module Leader: Dr. Sophia Miller</div>
+                        <p class="module-description">Focuses on self-driving technology, robotics, and intelligent agents.</p>
+                        <div class="module-courses">Relevant Courses: MSc Machine Learning, MSc Artificial Intelligence</div>
+                    </div>
+    
+                    <div class="module" data-level="postgraduate">
+                        <h3>Digital Forensics & Incident Response</h3>
+                        <div class="module-leader">Module Leader: Dr. Benjamin Carter</div>
+                        <p class="module-description">Teaches forensic analysis, evidence gathering, and threat mitigation.</p>
+                        <div class="module-courses">Relevant Courses: MSc Cyber Security</div>
+                    </div>
+    
+                    <div class="module" data-level="postgraduate">
+                        <h3>Postgraduate Dissertation</h3>
+                        <div class="module-leader">Module Leader: Dr. Chloe Thompson</div>
+                        <p class="module-description">A major research project where students explore advanced topics in computing.</p>
+                        <div class="module-courses">Relevant Courses: All Postgraduate Computing Programmes</div>
+                    </div>
+                </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const checkboxes = document.querySelectorAll('.filter input[type="checkbox"]');
+            const modules = document.querySelectorAll('.module');
+            const searchBar = document.getElementById("search-bar");
+    
+            function updateModuleVisibility() {
+                const selectedLevels = Array.from(checkboxes)
+                    .filter(cb => cb.checked)
+                    .map(cb => cb.value);
+                const searchTerm = searchBar.value.toLowerCase().trim();
+    
+                modules.forEach(module => {
+                    const moduleName = module.querySelector("h3").textContent.toLowerCase();
+                    const moduleDescription = module.querySelector(".module-description").textContent.toLowerCase();
+                    const moduleLevel = module.getAttribute('data-level') || 'undergraduate';
+                    
+                    const matchesLevel = selectedLevels.includes(moduleLevel);
+                    const matchesSearch = moduleName.includes(searchTerm) || moduleDescription.includes(searchTerm);
+                    
+                    module.style.display = (matchesLevel && matchesSearch) ? "block" : "none";
+                });
+            }
+    
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener("change", updateModuleVisibility);
+            });
+    
+            searchBar.addEventListener("input", updateModuleVisibility);
+    
+            updateModuleVisibility();
+        });
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const loginLink = document.getElementById('login-link');
+                const logoutLink = document.getElementById('logout-link');
+                const adminDashboardLink = document.getElementById('admin-dashboard-link');
+    
+                function checkLoginStatus() {
+                    const adminToken = localStorage.getItem('adminToken');
+                    if (adminToken) {
+                        loginLink.style.display = 'none';
+                        logoutLink.style.display = 'block';
+                        adminDashboardLink.style.display = 'block';
+                    } else {
+                        loginLink.style.display = 'block';
+                        logoutLink.style.display = 'none';
+                        adminDashboardLink.style.display = 'none';
+                    }
+                }
+    
+                checkLoginStatus();
+    
+                logoutLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    localStorage.removeItem('adminToken');
+                    checkLoginStatus();
+                    window.location.href = 'admin_login.html';
+                });
+            });
+        </script>
+</body>
+</html>

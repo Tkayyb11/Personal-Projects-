@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Course Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="index1.html">
+                <img src="https://i.fbcd.co/products/resized/resized-1500-1000/university-logo-converted-01-45c1f69249d8d113e17549c483a945debce48c771b5a4bcdf54fd6f890833276.webp" alt="University Logo" class="logo">
+            </a>
+            <span class="logo-text">Student Course Hub</span>
+        </div>    
+        <nav>
+            <a href="modules.html">Modules</a>
+            <a href="staff.html">Staff</a>
+            <a href="admin_dashboard.html" id="admin-dashboard-link" style="display:none;">Admin Dashboard</a>
+            <a href="admin_login.html" id="login-link">Login</a>
+            <a href="#" id="logout-link" style="display:none;">Logout</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="filter">
+            <h2>Filter</h2>
+            <label>
+                <input type="checkbox" id="undergraduate" value="undergraduate" checked> Undergraduate
+            </label>
+            <label>
+                <input type="checkbox" id="postgraduate" value="postgraduate" checked> Postgraduate
+            </label>
+            <section class="search-container">
+                <input type="text" id="search-bar" placeholder="Search for a programme...">
+            </section>
+        </section>
+
+        <section class="programmes">
+            <h2>Programmes</h2>
+            <div class="programme-list">
+
+                <div class="programme" data-level="undergraduate">
+                    <a href="programme.html?id=1">
+                        <img src="https://onlinecourseing.com/wp-content/uploads/2021/11/15-Best-Computer-Science-Courses-Online-for-Beginners.jpg" alt="BSc Computer Science">
+                        <h3>BSc Computer Science</h3>
+                    </a>
+                </div>
+
+                <div class="programme" data-level="undergraduate">
+                    <a href="programme.html?id=2">
+                        <img src="https://wallpaperaccess.com/full/3632441.jpg" alt="BSc Software Engineering">
+                        <h3>BSc Software Engineering</h3>
+                    </a>
+                </div>
+
+                <div class="programme" data-level="undergraduate">
+                    <a href="programme.html?id=3">
+                        <img src="https://www.udacity.com/blog/wp-content/uploads/2021/03/Advanced-AI-Courses_Blog.jpeg" alt="BSc Artificial Intelligence">
+                        <h3>BSc Artificial Intelligence</h3>
+                    </a>
+                </div>
+
+                <div class="programme" data-level="undergraduate">
+                    <a href="programme.html?id=4">
+                        <img src="https://www.york.ac.uk/media/study/courses/postgraduate/computerscience/cyber%20security%20banner.jpg" alt="BSc Cyber Security">
+                        <h3>BSc Cyber Security</h3>
+                    </a>
+                </div>
+
+                <div class="programme" data-level="undergraduate">
+                    <a href="programme.html?id=5">
+                        <img src="https://www.cdmi.in/courses@2x/data-science.webp" alt="BSc Data Science">
+                        <h3>BSc Data Science</h3>
+                    </a>
+                </div>
+
+                <div class="programme" data-level="postgraduate">
+                    <a href="programme.html?id=6">
+                        <img src="https://theconstructor.org/wp-content/uploads/2021/05/ML1-scaled.jpg" alt="MSc Machine Learning">
+                        <h3>MSc Machine Learning</h3>
+                    </a>
+                </div>
+
+                <div class="programme" data-level="postgraduate">
+                    <a href="programme.html?id=7">
+                        <img src="https://www.york.ac.uk/media/study/courses/postgraduate/computerscience/cyber%20security%20banner.jpg" alt="MSc Cyber Security">
+                        <h3>MSc Cyber Security</h3>
+                    </a>
+                </div>
+
+                <div class="programme" data-level="postgraduate">
+                    <a href="programme.html?id=8">
+                        <img src="https://www.cdmi.in/courses@2x/data-science.webp" alt="MSc Data Science">
+                        <h3>MSc Data Science</h3>
+                    </a>
+                </div>
+
+                <div class="programme" data-level="postgraduate">
+                    <a href="programme.html?id=9">
+                        <img src="https://www.udacity.com/blog/wp-content/uploads/2021/03/Advanced-AI-Courses_Blog.jpeg" alt="MSc Artificial Intelligence">
+                        <h3>MSc Artificial Intelligence</h3>
+                    </a>
+                </div>
+
+                <div class="programme" data-level="postgraduate">
+                    <a href="programme.html?id=10">
+                        <img src="https://wallpaperaccess.com/full/3632441.jpg" alt="MSc Software Engineering">
+                        <h3>MSc Software Engineering</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginLink = document.getElementById('login-link');
+            const logoutLink = document.getElementById('logout-link');
+            const adminDashboardLink = document.getElementById('admin-dashboard-link');
+
+            function checkLoginStatus() {
+                const adminToken = localStorage.getItem('adminToken');
+                if (adminToken) {
+                    loginLink.style.display = 'none';
+                    logoutLink.style.display = 'block';
+                    adminDashboardLink.style.display = 'block';
+                } else {
+                    loginLink.style.display = 'block';
+                    logoutLink.style.display = 'none';
+                    adminDashboardLink.style.display = 'none';
+                }
+            }
+
+            checkLoginStatus();
+
+            logoutLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                localStorage.removeItem('adminToken');
+                checkLoginStatus();
+                window.location.href = 'admin_login.html';
+            });
+        });
+    </script>
+    <script src="filter.js"></script>
+</body>
+</html>

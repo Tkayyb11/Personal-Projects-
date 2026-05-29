@@ -1,0 +1,619 @@
+body { 
+    font-family: system-ui;
+    font-size: 1.3rem;
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    padding-top: 100px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(0, 0%, 100%);
+    color: rgb(0, 0, 0);
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 500;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    height: 80px;
+    width: auto;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    padding: 0.5em 1em;
+    transition: background-color 400ms;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.filter {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.filter label {
+    display: block; 
+    margin-bottom: 0.5rem;
+}
+
+#search-bar {
+    width: 100%;
+    max-width: 300px;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: block;
+    margin: 0 auto 1rem auto;
+    text-align: center;
+}
+
+#search-bar:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.programmes {
+    padding: 1rem;
+}
+
+.programme-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.programme {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.programme:hover {
+    transform: scale(1.03);
+}
+
+.programme a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.programme img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.programme h3 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.programme-header {
+    position: relative;
+    text-align: center;
+    color: white;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.programme-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.programme-header h1 {
+    position: relative;
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.programme-details {
+    background: white;
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.programme-section {
+    width: 100%;
+    max-width: 1200px;
+    padding: 2rem;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.programme-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.programme-section ul li {
+    background: #cdcdcd;
+    color: black;
+    padding: 0.75rem;
+    margin: 0.3rem 0;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+    margin: auto;
+}
+
+#register-form input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#register-form button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+ 
+#register-form button:hover {
+    background: #0056b3;
+}
+
+#register-message {
+    font-weight: bold;
+    color: green;
+    text-align: center;
+}
+
+#withdraw-button {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    padding: 0.75rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: black;
+    background-color: #ccc;
+    border: 2px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    margin: 1rem auto;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#withdraw-button:hover {
+    background-color: #b3b3b3;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+
+@media (max-width: 1024px) {
+    .programme-details {
+        max-width: 95%;
+    }
+
+    .programme-section {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .programme-details {
+        padding: 2rem;
+    }
+}
+
+.staff-container {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.staff-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(0, 0%, 100%);
+    color: rgb(0, 0, 0);
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 500;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.staff-logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.staff-logo {
+    height: 80px;
+    width: auto;
+}
+
+.staff-logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+}
+
+.staff-nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.staff-nav a {
+    text-decoration: none;
+    color: black;
+    padding: 0.5em 1em;
+    transition: background-color 400ms;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.staff-nav a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.staff-filter {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.staff-filter label {
+    display: block; 
+    margin-bottom: 0.5rem;
+}
+
+.staff-programmes {
+    text-align: center;
+}
+
+.staff-programme-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.staff-programme {
+    background: white;
+    border: 2px solid #000;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.staff-programme:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.staff-faculty-header img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #000;
+    margin-bottom: 10px;
+}
+
+.staff-faculty-header h3 {
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 5px;
+}
+
+.staff-faculty-header p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.staff-faculty-contact p {
+    font-size: 1rem;
+    margin: 5px 0;
+    color: #555;
+}
+
+.staff-faculty-contact p::before {
+    font-weight: bold;
+    color: #000;
+}
+
+@media (max-width: 768px) {
+    .staff-programme-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .staff-filter label {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+
+.module-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.module {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.module:hover {
+    transform: scale(1.03);
+}
+
+.module h3 {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.module-leader {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.module-description {
+    font-size: 1rem;
+    color: #444;
+}
+
+.module.hidden {
+    display: none;
+}
+
+#admin-login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: 2rem auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#admin-login-form h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+#admin-login-form label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+#admin-login-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#admin-login-form button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#admin-login-form button:hover {
+    background: #0056b3;
+}
+
+#login-message {
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+#admin-logout {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#admin-logout:hover {
+    background: #0056b3;
+}
+
+#admin-dashboard-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+#programme-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.programme-item {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.programme-item:hover {
+    transform: scale(1.03);
+}
+
+.programme-item .view-programme-btn,
+.programme-item .edit-programme-btn,
+.programme-item .delete-programme-btn,
+#add-programme-btn,
+#export-mailing-list {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+.programme-item .delete-programme-btn {
+    background: #dc3545;
+}
+
+.programme-item .edit-programme-btn {
+    background: #28a745;
+}
+
+.programme-item .view-programme-btn {
+    text-decoration: none;
+    text-align: center;
+}
+
+.programme-item .view-programme-btn:hover,
+.programme-item .edit-programme-btn:hover,
+.programme-item .delete-programme-btn:hover,
+#add-programme-btn:hover,
+#export-mailing-list:hover {
+    opacity: 0.9;
+}
+
+#programme-select {
+    width: 100%;
+    max-width: 300px;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#student-registrations table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#student-registrations table th, 
+#student-registrations table td {
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+#student-registrations table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}

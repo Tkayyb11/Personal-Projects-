@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Staff Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="staff-header">
+        <div class="staff-logo-container">
+            <a href="index1.html">
+                <img src="https://i.fbcd.co/products/resized/resized-1500-1000/university-logo-converted-01-45c1f69249d8d113e17549c483a945debce48c771b5a4bcdf54fd6f890833276.webp" alt="University Logo" class="staff-logo">
+            </a>
+            <span class="staff-logo-text">Staff Portal</span>
+        </div>    
+        <nav class="staff-nav">
+            <a href="modules.html">Modules</a>
+            <a href="staff.html">Staff</a>
+            <a href="admin_dashboard.html" id="admin-dashboard-link" style="display:none;">Admin Dashboard</a>
+            <a href="admin_login.html" id="login-link">Login</a>
+            <a href="#" id="logout-link" style="display:none;">Logout</a>
+        </nav>
+    </header>
+
+    <main class="staff-container">
+        <section class="staff-filter">
+            <h2>Filter</h2>
+            <label>
+                <input type="checkbox" id="staff-faculty" value="faculty" checked> Faculty
+            </label>
+            <label>
+                <input type="checkbox" id="staff-administration" value="administration" checked> Administration
+            </label>
+        </section>
+
+        <section class="staff-programmes">
+            <h2>Staff Directory</h2>
+            <div class="staff-programme-list">
+                <div class="staff-programme" data-type="faculty">
+                    <div class="staff-faculty-header">
+                        <img src="https://th.bing.com/th/id/OIP.FEp3o0ESgjvieXCiGYfiBQAAAA?rs=1&pid=ImgDetMain" alt="Dr. Alice Johnson">
+                        <h3>Dr. Alice Johnson</h3>
+                        <p>Computer Science Department</p>
+                    </div>
+                    <div class="staff-faculty-contact">
+                        <p>📧 alice.johnson@university.edu</p>
+                        <p>📞 +447397462894</p>
+                    </div>
+                </div>
+
+                <div class="staff-programme" data-type="faculty">
+                    <div class="staff-faculty-header">
+                        <img src="https://www.scorpiotankers.com/wp-content/uploads/2022/12/Brian-Lee-1.jpg" alt="Dr. Brian Lee">
+                        <h3>Dr. Brian Lee</h3>
+                        <p>Mathematics Department</p>
+                    </div>
+                    <div class="staff-faculty-contact">
+                        <p>📧 brian.lee@university.edu</p>
+                        <p>📞 +447298374583</p>
+                    </div>
+                </div>
+
+                <div class="staff-programme" data-type="faculty">
+                    <div class="staff-faculty-header">
+                        <img src="https://olphna.org/images/stories/auto-extract/white-carol-409_resized.jpg" alt="Dr. Carol White">
+                        <h3>Dr. Carol White</h3>
+                        <p>Computer Systems Department</p>
+                    </div>
+                    <div class="staff-faculty-contact">
+                        <p>📧 carol.white@university.edu</p>
+                        <p>📞 +447304857689</p>
+                    </div>
+                </div>
+
+                <div class="staff-programme" data-type="faculty">
+                    <div class="staff-faculty-header">
+                        <img src="https://images.law.com/contrib/content/uploads/sites/378/2021/10/David-Green_14016-767x633.jpg" alt="Dr. David Green">
+                        <h3>Dr. David Green</h3>
+                        <p>Database Systems Department</p>
+                    </div>
+                    <div class="staff-faculty-contact">
+                        <p>📧 david.green@university.edu</p>
+                        <p>📞 +447390285621</p>
+                    </div>
+                </div>
+
+                <div class="staff-programme" data-type="faculty">
+                    <div class="staff-faculty-header">
+                        <img src="https://th.bing.com/th/id/OIP.65KxdYPA3mxJkwRi-AB3TQHaLH?rs=1&pid=ImgDetMain" alt="Dr. Emma Scott">
+                        <h3>Dr. Emma Scott</h3>
+                        <p>Software Engineering Department</p>
+                    </div>
+                    <div class="staff-faculty-contact">
+                        <p>📧 emma.scott@university.edu</p>
+                        <p>📞 +445839875091</p>
+                    </div>
+                </div>
+
+                <div class="staff-programme" data-type="faculty">
+                    <div class="staff-faculty-header">
+                        <img src="https://www.acli.com/-/media/acli/leadership/graham.jpg?h=350&w=400&la=en&hash=EE09C673BF116BD7784356C9F2F075C0" alt="Dr. Frank Moore">
+                        <h3>Dr. Frank Moore</h3>
+                        <p>Algorithms Department</p>
+                    </div>
+                    <div class="staff-faculty-contact">
+                        <p>📧 frank.moore@university.edu</p>
+                        <p>📞 +447294680924</p>
+                    </div>
+                </div>
+
+                <div class="staff-programme" data-type="faculty">
+                    <div class="staff-faculty-header">
+                        <img src="https://childressagency.com/wp-content/uploads/2023/05/irene-borys.jpg" alt="Dr. Grace Adams">
+                        <h3>Dr. Grace Adams</h3>
+                        <p>Cyber Security Department</p>
+                    </div>
+                    <div class="staff-faculty-contact">
+                        <p>📧 grace.adams@university.edu</p>
+                        <p>📞 +448390476894</p>
+                    </div>
+                </div>
+
+                <div class="staff-programme" data-type="faculty">
+                    <div class="staff-faculty-header">
+                        <img src="https://www.think2perform.com/wp-content/uploads/2022/09/dave-meldahl.png" alt="Dr. Henry Clark">
+                        <h3>Dr. Henry Clark</h3>
+                        <p>Artificial Intelligence Department</p>
+                    </div>
+                    <div class="staff-faculty-contact">
+                        <p>📧 henry.clark@university.edu</p>
+                        <p>📞 +442898736592</p>
+                    </div>
+                </div>
+
+                <div class="staff-programme" data-type="faculty">
+                    <div class="staff-faculty-header">
+                        <img src="https://th.bing.com/th/id/OIP.RED3ciDTwZ8RqiUrOvA6-wAAAA?rs=1&pid=ImgDetMain" alt="Dr. Irene Hall">
+                        <h3>Dr. Irene Hall</h3>
+                        <p>Machine Learning Department</p>
+                    </div>
+                    <div class="staff-faculty-contact">
+                        <p>📧 irene.hall@university.edu</p>
+                        <p>📞 +447693803987</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginLink = document.getElementById('login-link');
+            const logoutLink = document.getElementById('logout-link');
+            const adminDashboardLink = document.getElementById('admin-dashboard-link');
+
+            function checkLoginStatus() {
+                const adminToken = localStorage.getItem('adminToken');
+                if (adminToken) {
+                    loginLink.style.display = 'none';
+                    logoutLink.style.display = 'block';
+                    adminDashboardLink.style.display = 'block';
+                } else {
+                    loginLink.style.display = 'block';
+                    logoutLink.style.display = 'none';
+                    adminDashboardLink.style.display = 'none';
+                }
+            }
+
+            checkLoginStatus();
+
+            logoutLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                localStorage.removeItem('adminToken');
+                checkLoginStatus();
+                window.location.href = 'admin_login.html';
+            });
+        });
+    </script>
+    <script src="filter.js"></script>
+</body>
+</html>

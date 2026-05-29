@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Student Course Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="index1.html">
+                <img src="https://i.fbcd.co/products/resized/resized-1500-1000/university-logo-converted-01-45c1f69249d8d113e17549c483a945debce48c771b5a4bcdf54fd6f890833276.webp" alt="University Logo" class="logo">
+            </a>
+            <span class="logo-text">Student Course Hub - Admin Dashboard</span>
+        </div>
+        <nav>
+            <button id="admin-logout">Logout</button>
+        </nav>
+    </header>
+
+    <main id="admin-dashboard-main">
+        <section>
+            <h2>Programme Management</h2>
+            <div id="programme-list">
+            </div>
+            <button id="add-programme-btn" class="btn-primary">Add New Programme</button>
+        </section>
+
+        <section>
+            <h2>Student Registrations</h2>
+            <select id="programme-select">
+                <option value="">Select a Programme</option>
+            </select>
+            <div id="student-registrations">
+            </div>
+            <button id="export-mailing-list" class="btn-primary">Export Mailing List</button>
+        </section>
+    </main>
+
+    <script src="admin_dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Student Course Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="index1.html">
+                <img src="https://i.fbcd.co/products/resized/resized-1500-1000/university-logo-converted-01-45c1f69249d8d113e17549c483a945debce48c771b5a4bcdf54fd6f890833276.webp" alt="University Logo" class="logo">
+            </a>
+            <span class="logo-text">Student Course Hub - Admin</span>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>Administrator Login</h2>
+            <form id="admin-login-form">
+                <label for="admin-username">Username:</label>
+                <input type="text" id="admin-username" required>
+
+                <label for="admin-password">Password:</label>
+                <input type="password" id="admin-password" required>
+
+                <button type="submit">Login</button>
+                
+                <p id="login-message"></p>
+            </form>
+        </section>
+    </main>
+
+    <script>
+    (function() {
+        const AdminSystem = {
+            init() {
+                if (!localStorage.getItem('programmes')) {
+                    localStorage.setItem('programmes', JSON.stringify({}));
+                }
+                if (!localStorage.getItem('registeredProgrammes')) {
+                    localStorage.setItem('registeredProgrammes', JSON.stringify({}));
+                }
+            },
+
+            login(username, password) {
+                const validCredentials = {
+                    'admin': 'password123'
+                };
+
+                if (validCredentials[username] && validCredentials[username] === password) {
+                    const token = this.generateToken();
+                    localStorage.setItem('adminToken', token);
+                    return true;
+                }
+                return false;
+            },
+
+            generateToken() {
+                return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+            },
+
+            logout() {
+                localStorage.removeItem('adminToken');
+                window.location.href = 'admin_login.html';
+            }
+        };
+
+        AdminSystem.init();
+
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM Loaded, AdminSystem initialized');
+
+            const loginForm = document.getElementById('admin-login-form');
+            const loginMessage = document.getElementById('login-message');
+
+            if (!loginForm) {
+                console.error('Login form not found');
+                return;
+            }
+
+            loginForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const usernameInput = document.getElementById('admin-username');
+                const passwordInput = document.getElementById('admin-password');
+
+                const username = usernameInput.value;
+                const password = passwordInput.value;
+                
+                console.log('Login attempt:', { username, password });
+
+                const loginSuccess = AdminSystem.login(username, password);
+                
+                if (loginSuccess) {
+                    loginMessage.textContent = 'Login successful!';
+                    loginMessage.style.color = 'green';
+                    window.location.href = 'index1.html';
+                } else {
+                    loginMessage.textContent = 'Invalid username or password. Please try again.';
+                    loginMessage.style.color = 'red';
+                    passwordInput.value = '';
+                }
+            });
+        });
+
+        window.AdminSystem = AdminSystem;
+    })();
+    </script>
+</body>
+</html>
